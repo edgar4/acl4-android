@@ -1,8 +1,11 @@
 package ke.co.edgar.alc4;
 
 import android.graphics.Bitmap;
+import android.net.http.SslError;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -15,6 +18,7 @@ public class AboutALCActivity extends AppCompatActivity {
 
     private WebView alcWebView;
     private ProgressBar pBar;
+    private String TAG = AboutALCActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,7 @@ public class AboutALCActivity extends AppCompatActivity {
 
                 alcWebView.setVisibility(View.GONE);
                 pBar.setVisibility(View.VISIBLE);
+                Log.e(TAG, "onPageStarted: ");
 
             }
 
@@ -54,6 +59,12 @@ public class AboutALCActivity extends AppCompatActivity {
 
                 alcWebView.setVisibility(View.VISIBLE);
                 pBar.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                handler.proceed();
+                //super.onReceivedSslError(view, handler, error);
             }
         });
 
