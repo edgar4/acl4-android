@@ -29,6 +29,7 @@
         android:background="@drawable/acl_round_button"
         android:text="@string/about_alc"
         android:textColor="@color/colorWhite"
+        android:textSize="@dimen/button_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -43,6 +44,7 @@
         android:background="@drawable/acl_round_button"
         android:text="@string/my_profile"
         android:textColor="@color/colorWhite"
+        android:textSize="@dimen/button_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_about" />
