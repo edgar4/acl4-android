@@ -3,7 +3,6 @@ package ke.co.edgar.alc4;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebResourceRequest;
@@ -56,7 +55,6 @@ public class AboutALCActivity extends AppCompatActivity {
                 alcWebView.setVisibility(View.GONE);
                 pBar.setVisibility(View.VISIBLE);
                 loading.setVisibility(View.VISIBLE);
-                Log.e(TAG, "onPageStarted: ");
 
             }
 
@@ -76,6 +74,7 @@ public class AboutALCActivity extends AppCompatActivity {
         });
 
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
