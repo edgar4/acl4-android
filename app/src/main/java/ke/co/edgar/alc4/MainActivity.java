@@ -1,18 +1,18 @@
 package ke.co.edgar.alc4;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-
 public class MainActivity extends AppCompatActivity {
+
+    Button aboutBtn, profileBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,24 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle(R.string.app_name);
+
+        aboutBtn = findViewById(R.id.button_about);
+        profileBtn = findViewById(R.id.button_my_profile);
+
+        aboutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
     }
 
@@ -33,15 +51,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+
+            case R.id.action_settings:
+                Intent intentProfile = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
+                break;
+
         }
+
 
         return super.onOptionsItemSelected(item);
     }
