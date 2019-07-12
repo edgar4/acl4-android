@@ -15,11 +15,11 @@ TextViews showing your name, Track, Country, Email and Phone Number.
 ## Screen 2
 ![Alt text](/screenshot/2.jpg?raw=true "Step 2")
 ## Screen 3.0
-![Alt text](/screenshot/3.0jpg?raw=true "Step 3")
+![Alt text](/screenshot/3.0.jpg?raw=true "Step 3")
 ## Screen 3.1
-![Alt text](/screenshot/3.1jpg?raw=true "Step 3")
+![Alt text](/screenshot/3.1.jpg?raw=true "Step 3")
 ## Screen 3.2
-![Alt text](/screenshot/3.2jpg?raw=true "Step 3")
+![Alt text](/screenshot/3.2.jpg?raw=true "Step 3")
 
 ## Screen 4
 ![Alt text](/screenshot/4.jpg?raw=true "Step 4")
