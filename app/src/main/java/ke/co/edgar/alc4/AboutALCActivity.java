@@ -1,7 +1,10 @@
 package ke.co.edgar.alc4;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,6 +30,23 @@ public class AboutALCActivity extends AppCompatActivity {
         alcWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         alcWebView.setScrollbarFadingEnabled(false);
         alcWebView.loadUrl(getResources().getString(R.string.alc_link));
+
+        alcWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                return true;
+            }
+
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+
+            }
+        });
 
     }
 
