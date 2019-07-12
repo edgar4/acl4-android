@@ -3,11 +3,11 @@ package ke.co.edgar.alc4.model;
 public class MyProfile {
     String label, value;
 
-    MyProfile() {
+    public MyProfile() {
 
     }
 
-    MyProfile(String label, String value) {
+    public MyProfile(String label, String value) {
         this.value = value;
         this.label = label;
     }
