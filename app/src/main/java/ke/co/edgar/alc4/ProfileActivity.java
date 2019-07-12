@@ -7,11 +7,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
+import ke.co.edgar.alc4.adapter.ProfileAdapter;
+import ke.co.edgar.alc4.model.MyProfile;
+
 public class ProfileActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private List<MyProfile> myProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +32,7 @@ public class ProfileActivity extends AppCompatActivity {
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-
-        // specify an adapter (see also next example)
-        mAdapter = new MyProfile(myDataset);
+        mAdapter = new ProfileAdapter(myProfile);
         recyclerView.setAdapter(mAdapter);
 
     }
