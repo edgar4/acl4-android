@@ -18,6 +18,14 @@ public class AboutALCActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         alcWebView = findViewById(R.id.acl_webview);
+        alcWebView.getSettings().setJavaScriptEnabled(true);
+        alcWebView.getSettings().setLoadWithOverviewMode(true);
+        alcWebView.getSettings().setUseWideViewPort(true);
+        alcWebView.getSettings().setSupportZoom(true);
+        alcWebView.getSettings().setDisplayZoomControls(false);
+        alcWebView.getSettings().setBuiltInZoomControls(true);
+        alcWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        alcWebView.setScrollbarFadingEnabled(false);
         alcWebView.loadUrl(getResources().getString(R.string.alc_link));
 
     }
