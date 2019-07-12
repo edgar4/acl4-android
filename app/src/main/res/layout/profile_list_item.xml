@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/fiveteen_dp"
+    >
+
+    <TextView
+        android:id="@+id/profile_label"
+        android:layout_width="wrap_content"
+        android:text="@string/my_profile_label"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/fiveteen_dp"/>
+
+    <TextView
+        android:id="@+id/profile_value"
+        android:text="@string/my_profile_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
