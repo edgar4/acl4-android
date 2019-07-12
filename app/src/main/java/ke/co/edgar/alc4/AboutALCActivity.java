@@ -2,9 +2,11 @@ package ke.co.edgar.alc4;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -12,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 public class AboutALCActivity extends AppCompatActivity {
 
     private WebView alcWebView;
+    private ProgressBar pBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,7 @@ public class AboutALCActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about_alc);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        pBar = findViewById(R.id.pBar);
 
         alcWebView = findViewById(R.id.acl_webview);
         alcWebView.getSettings().setJavaScriptEnabled(true);
@@ -40,11 +44,16 @@ public class AboutALCActivity extends AppCompatActivity {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
 
+                alcWebView.setVisibility(View.GONE);
+                pBar.setVisibility(View.VISIBLE);
+
             }
 
             @Override
             public void onPageFinished(WebView view, String url) {
 
+                alcWebView.setVisibility(View.VISIBLE);
+                pBar.setVisibility(View.GONE);
             }
         });
 
