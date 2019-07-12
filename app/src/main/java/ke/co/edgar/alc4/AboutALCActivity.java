@@ -1,16 +1,14 @@
 package ke.co.edgar.alc4;
 
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.webkit.WebView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
-
 public class AboutALCActivity extends AppCompatActivity {
+
+    private WebView alcWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +17,9 @@ public class AboutALCActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        alcWebView = findViewById(R.id.acl_webview);
+        alcWebView.loadUrl(getResources().getString(R.string.alc_link));
+
     }
 
 }
