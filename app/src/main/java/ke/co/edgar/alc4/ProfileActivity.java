@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 
@@ -56,6 +57,7 @@ public class ProfileActivity extends AppCompatActivity {
                 .getIdentifier("ic_my_pic", "drawable", this.getPackageName()))
                 .transition(new DrawableTransitionOptions().crossFade())
                 .apply(new RequestOptions().circleCrop())
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(pic);
         name.setText("Edgar Chris");
         myProfile.add(new MyProfile("Track:", "Android"));
