@@ -8,4 +8,5 @@
     <string name="my_profile">My Profile</string>
     <string name="alc_link">https://andela.com/alc/</string>
     <string name="alc_loading">Loading ALC 4.0 Content Please wait ...</string>
+    <string name="my_profile_img">My profile Image</string>
 </resources>
