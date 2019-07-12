@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:text="@string/my_profile_label"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/fiveteen_dp"/>
+        android:layout_marginEnd="@dimen/fiveteen_dp"/>
 
     <TextView
         android:id="@+id/profile_value"
