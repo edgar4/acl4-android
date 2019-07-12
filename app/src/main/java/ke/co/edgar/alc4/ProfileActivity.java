@@ -60,6 +60,7 @@ public class ProfileActivity extends AppCompatActivity {
         myProfile.add(new MyProfile("Email:", "me@edgar.co.ke"));
         myProfile.add(new MyProfile("Phone Number:", "+254 717 11 38 86"));
         myProfile.add(new MyProfile("Slack Username:", "@Edgar chris"));
+        mAdapter.notifyDataSetChanged();
     }
 
 }
