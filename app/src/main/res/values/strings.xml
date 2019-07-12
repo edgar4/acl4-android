@@ -3,4 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_about_alc">AboutALCActivity</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="alc_welcome">Welcome to ALC 4.0</string>
+    <string name="about_alc">About Alc</string>
+    <string name="my_profile">My Profile</string>
 </resources>
