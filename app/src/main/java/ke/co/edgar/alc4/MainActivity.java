@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         aboutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intentAbout = new Intent(MainActivity.this, AboutALCActivity.class);
+                startActivity(intentAbout);
 
             }
         });
@@ -35,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intentProfile = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
             }
         });
 
