@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,8 +54,9 @@ public class ProfileActivity extends AppCompatActivity {
 
         Glide.with(this).load(this.getResources()
                 .getIdentifier("ic_my_pic", "drawable", this.getPackageName()))
+                .transition(new DrawableTransitionOptions().crossFade())
+                .apply(new RequestOptions().circleCrop())
                 .into(pic);
-
         name.setText("Edgar Chris");
         myProfile.add(new MyProfile("Track:", "Android"));
         myProfile.add(new MyProfile("Country:", "Kenya"));
