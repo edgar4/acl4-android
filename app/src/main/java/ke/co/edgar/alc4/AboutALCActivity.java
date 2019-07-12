@@ -28,6 +28,8 @@ public class AboutALCActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about_alc);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         pBar = findViewById(R.id.pBar);
         loading = findViewById(R.id.alc_loading);
 
@@ -73,6 +75,11 @@ public class AboutALCActivity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
 }
