@@ -10,6 +10,7 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -19,6 +20,7 @@ public class AboutALCActivity extends AppCompatActivity {
     private WebView alcWebView;
     private ProgressBar pBar;
     private String TAG = AboutALCActivity.class.getSimpleName();
+    private TextView loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class AboutALCActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         pBar = findViewById(R.id.pBar);
+        loading = findViewById(R.id.alc_loading);
 
         alcWebView = findViewById(R.id.acl_webview);
         alcWebView.getSettings().setJavaScriptEnabled(true);
@@ -50,6 +53,7 @@ public class AboutALCActivity extends AppCompatActivity {
 
                 alcWebView.setVisibility(View.GONE);
                 pBar.setVisibility(View.VISIBLE);
+                loading.setVisibility(View.VISIBLE);
                 Log.e(TAG, "onPageStarted: ");
 
             }
@@ -59,6 +63,7 @@ public class AboutALCActivity extends AppCompatActivity {
 
                 alcWebView.setVisibility(View.VISIBLE);
                 pBar.setVisibility(View.GONE);
+                loading.setVisibility(View.GONE);
             }
 
             @Override
