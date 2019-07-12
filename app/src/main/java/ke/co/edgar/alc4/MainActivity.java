@@ -6,9 +6,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
         aboutBtn = findViewById(R.id.button_about);
         profileBtn = findViewById(R.id.button_my_profile);
+        ImageView logo = findViewById(R.id.alc_logo);
+        Glide.with(this).load(this.getResources()
+                .getIdentifier("alc_logo", "drawable", this.getPackageName()))
+                .transition(new DrawableTransitionOptions().crossFade())
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(logo);
 
         aboutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
