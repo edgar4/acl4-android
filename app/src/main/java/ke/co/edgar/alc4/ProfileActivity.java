@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import ke.co.edgar.alc4.adapter.ProfileAdapter;
@@ -33,6 +34,7 @@ public class ProfileActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         name = findViewById(R.id.my_name);
         pic = findViewById(R.id.profile_img);
+        myProfile = new ArrayList<>();
         recyclerView = findViewById(R.id.recylerView);
         recyclerView.setHasFixedSize(true);
 
