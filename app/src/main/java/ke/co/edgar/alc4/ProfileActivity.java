@@ -35,6 +35,8 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         name = findViewById(R.id.my_name);
         pic = findViewById(R.id.profile_img);
         myProfile = new ArrayList<>();
@@ -66,6 +68,14 @@ public class ProfileActivity extends AppCompatActivity {
         myProfile.add(new MyProfile("Phone Number:", "+254 717 11 38 86"));
         myProfile.add(new MyProfile("Slack Username:", "@Edgar chris"));
         mAdapter.notifyDataSetChanged();
+    }
+
+
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
 }
